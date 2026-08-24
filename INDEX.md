@@ -1,6 +1,6 @@
 # Skills Index
 
-Generated: 2026-08-24 19:18:15 +08:00
+Generated: 2026-08-24 20:48:23 +08:00
 Canonical skill root: `C:\Users\bryan\OneDrive\01 SKILLS\.agents\skills`
 
 This library keeps the full canonical skill set in OneDrive, while installed agent roots expose the lean profile from `default-profile.toml`. Use `skill-router` to discover and load on-demand skills from `skills/<kebab-name>/SKILL.md`. Use `dotagents install`, not `dotagents sync`.
@@ -9,7 +9,7 @@ This library keeps the full canonical skill set in OneDrive, while installed age
 
 | Root | Count | Notes |
 |---|---:|---|
-| canonical library | 203 | Full OneDrive source library |
+| canonical library | 206 | Full OneDrive source library |
 | default profile | 64 | Desired baseline from default-profile.toml |
 | codex | 64 | Lean profile; Codex runtime/system folders excluded from count |
 | claude | 64 | Lean installed profile |
@@ -59,6 +59,7 @@ This library keeps the full canonical skill set in OneDrive, while installed age
 | `azure-upgrade` | "Assess and upgrade Azure workloads between plans, tiers, or SKUs, or modernize Azure SDK dependencies in source code. WHEN: upgrade Consumption to Flex Consumption, upgrade Azu... | - | ON-DEMAND |
 | `azure-validate` | "Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RBAC role assignments, managed identity permissions, and p... | - | ON-DEMAND |
 | `background-removal` | "Remove backgrounds from images with BiRefNet via inference.sh CLI. Model: BiRefNet (high accuracy background removal). Use for: product photos, portraits, e-commerce, transpare... | - | ON-DEMAND |
+| `backprop` | Bug-to-invariant protocol. When a bug is confirmed or a test fails, trace the root cause, then decide whether a new §I invariant would prevent recurrence and file it into SPEC.m... | - | ON-DEMAND |
 | `book-cover-design` | "Book cover design with genre-specific conventions, typography rules, and AI image generation. Covers fiction and non-fiction genres, sizing, thumbnail testing, and iteration wo... | - | ON-DEMAND |
 | `brand-guidelines` | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidel... | - | ON-DEMAND |
 | `bug-diagnosis` | Structured bug diagnosis producing a written diagnosis document before any fix is attempted. Use when the user reports a bug, asks to investigate why something fails, says diagn... | codex, claude, cursor | INSTALLED |
@@ -176,6 +177,7 @@ This library keeps the full canonical skill set in OneDrive, while installed age
 | `session-handoff` | "Creates comprehensive handoff documents for seamless AI agent session transfers. Triggered when: (1) user requests handoff/memory/context save, (2) context window approaches ca... | - | ON-DEMAND |
 | `shadcn` | Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies w... | codex, claude, cursor | INSTALLED |
 | `skill-add` | Add a skill from an upstream GitHub repository, URL, pasted markdown, pasted instructions, or a described tool workflow. Use when the user says add this skill, install this skil... | codex, claude, cursor | INSTALLED |
+| `skill-authoring` | Conventions for creating, editing, pruning, or auditing AI-agent skills on this Windows dotagents setup. Canonical skills live under OneDrive `01 SKILLS/.agents/skills`; PowerSh... | - | ON-DEMAND |
 | `skill-cleanup` | Audit, prune, deduplicate, archive, or reorganize the local AI-agent skill library. Use when the user says clean up skills, too many skills, prune installed roots, remove unused... | codex, claude, cursor | INSTALLED |
 | `skill-create` | Create a new local AI-agent skill from a requested capability or workflow. Use when the user says create a skill, make a skill, new skill, future agents should know, or teach ag... | codex, claude, cursor | INSTALLED |
 | `skill-creator` | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, ru... | codex, claude, cursor | INSTALLED |
@@ -186,6 +188,7 @@ This library keeps the full canonical skill set in OneDrive, while installed age
 | `skill-update` | Update one skill or improve the skill library by learning from current coding practices, agent configs, project conventions, failures, or new preferences. Use when the user says... | codex, claude, cursor | INSTALLED |
 | `slack-gif-creator` | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for ... | - | ON-DEMAND |
 | `social-media-carousel` | "Multi-slide carousel design for Instagram, LinkedIn, and Twitter/X with layout rules and hooks. Covers slide structure, text hierarchy, swipe psychology, and platform-specific ... | - | ON-DEMAND |
+| `spec` | Create, amend, or maintain SPEC.md at repo root: goals, contracts, invariants, tasks, and backpropped bugs. Sole mutator of the project spec. Triggers when the user asks to writ... | - | ON-DEMAND |
 | `speech-to-text` | "Transcribe audio to text with ElevenLabs Scribe and Whisper models via inference.sh CLI. Models: ElevenLabs Scribe v2 (98%+ accuracy, diarization), Fast Whisper Large V3, Whisp... | - | ON-DEMAND |
 | `storyboard-creation` | "Film and video storyboarding with shot vocabulary, continuity rules, and panel layout. Covers shot types, camera angles, movement, 180-degree rule, and annotation format. Use f... | - | ON-DEMAND |
 | `supabase` | "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR int... | - | ON-DEMAND |

@@ -83,3 +83,9 @@ trigger words, body has no dangling skill refs, no secrets, INDEX regenerated.
 - `skill-create` - scaffold a new local skill through this convention set
 - `skill-cleanup`, `skill-remove` - pruning flows
 - `skill-judge` - scoring rubric for finished skills
+
+## Backup
+
+After any library change, commit and push to the private remote
+the private remote (see ENVIRONMENT.md at the .agents
+root for exact commands. OneDrive is transport, not a backup.

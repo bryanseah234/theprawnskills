@@ -42,3 +42,22 @@ Always use Windows-style paths or forward-slash equivalents:
 - **NEVER run `dotagents sync`** — it re-adopts ~76 unmanaged local skills as `path:` entries, which are broken on this Windows + symlink setup and will cause the next `install` to fail with "resolves outside project root".
 - The symlink error (`EPERM: symlink`) at the end of `install` is harmless — the `~/.claude/skills` junction is set up manually.
 - If `sync` was run accidentally: remove all `source = "path:skills/..."` lines from `agents.toml`.
+
+## Skill library backup (theprawnskills)
+
+The canonical skill library is a git repo backed up offsite:
+
+- Remote: the private remote `theprawnskills` (see `git remote -v`)
+- Repo root = this folder (.agents). Branch: main.
+- After ANY meaningful change to skills/, registry files, or scripts:
+
+```powershell
+git -C "C:\Users\bryan\OneDrive\01 SKILLS\.agents" add -A
+git -C "C:\Users\bryan\OneDrive\01 SKILLS\.agents" commit -m "chore(library): <what changed>"
+git -C "C:\Users\bryan\OneDrive\01 SKILLS\.agents" push
+```
+
+- Disaster recovery: git clone the private repo, copy contents over .agents,
+  excluding nothing; installed roots re-propagate via
+  scripts/Install-DefaultSkillProfile.ps1.
+- Ignored: node_modules/, packages/, _removed/ (re-fetchable artifacts).
