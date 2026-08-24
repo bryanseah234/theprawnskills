@@ -1,0 +1,53 @@
+# Machine registry for skill propagation.
+#
+# Keep this file current when machines are added, renamed, retired, or when SSH
+# aliases change. Skills must read this file at runtime instead of hardcoding a
+# fixed machine count.
+#
+# `local = true` means paths are on the current filesystem.
+# `ssh = "alias"` means use the user's SSH alias or host with PowerShell
+# commands executed through ssh.
+
+version = 1
+
+[[machines]]
+id = "prawn-e14"
+label = "Prawn E14"
+enabled = true
+local = true
+ssh = "prawn-e14"
+tailscale_ip = "100.92.164.125"
+canonical_root = "C:\\Users\\bryan\\OneDrive\\01 SKILLS\\.agents"
+installed_roots = [
+  "C:\\Users\\bryan\\.codex\\skills",
+  "C:\\Users\\bryan\\.claude\\skills",
+  "C:\\Users\\bryan\\.cursor\\skills",
+]
+
+[[machines]]
+id = "prawn-l390"
+label = "Prawn L390"
+enabled = true
+ssh = "prawn-l390"
+tailscale_ip = "100.77.210.46"
+canonical_root = "C:\\Users\\bryan\\OneDrive\\01 SKILLS\\.agents"
+installed_roots = [
+  "C:\\Users\\bryan\\.codex\\skills",
+  "C:\\Users\\bryan\\.claude\\skills",
+]
+
+[[machines]]
+id = "prawn-t14"
+label = "Prawn T14"
+enabled = true
+ssh = "prawn-t14"
+tailscale_ip = "100.87.34.38"
+canonical_root = "C:\\Users\\bryan\\OneDrive\\01 SKILLS\\.agents"
+installed_roots = [
+  "C:\\Users\\bryan\\.codex\\skills",
+  "C:\\Users\\bryan\\.claude\\skills",
+]
+
+# Add future machines by appending another [[machines]] table. Use a stable
+# Tailscale SSH alias in `ssh`, keep `enabled = true`, and list only installed
+# roots that should receive the default profile on that machine.

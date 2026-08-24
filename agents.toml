@@ -1,0 +1,174 @@
+version = 1
+agents = ["claude", "cursor", "codex", "vscode", "opencode"]
+
+[trust]
+allow_all = true
+
+# Lean install manifest generated 2026-08-21.
+# The full canonical library remains in skills/ for on-demand use.
+# Use `dotagents install`; do not run `dotagents sync`.
+# Local/personal skills from default-profile.toml, such as skill-router,
+# skill-create, skill-add, skill-update, skill-cleanup, skill-remove, and
+# postplan-upload, are installed manually because `source = "path:skills/..."`
+# has been unreliable on this Windows + user-scope symlink setup.
+
+# === dotagents tool itself ===
+
+[[skills]]
+name = "dotagents"
+source = "getsentry/dotagents"
+
+# === Caveman workflow helpers ===
+
+[[skills]]
+name = "cavecrew"
+source = "JuliusBrussee/caveman"
+path = "skills/cavecrew"
+
+[[skills]]
+name = "caveman"
+source = "JuliusBrussee/caveman"
+path = "skills/caveman"
+
+[[skills]]
+name = "caveman-commit"
+source = "JuliusBrussee/caveman"
+path = "skills/caveman-commit"
+
+[[skills]]
+name = "caveman-compress"
+source = "JuliusBrussee/caveman"
+path = "skills/caveman-compress"
+
+[[skills]]
+name = "caveman-help"
+source = "JuliusBrussee/caveman"
+path = "skills/caveman-help"
+
+[[skills]]
+name = "caveman-review"
+source = "JuliusBrussee/caveman"
+path = "skills/caveman-review"
+
+[[skills]]
+name = "caveman-stats"
+source = "JuliusBrussee/caveman"
+path = "skills/caveman-stats"
+
+# === Anthropic skills kept in default install ===
+
+[[skills]]
+name = "mcp-builder"
+source = "anthropics/skills"
+path = "skills/mcp-builder"
+
+[[skills]]
+name = "skill-creator"
+source = "anthropics/skills"
+path = "skills/skill-creator"
+
+# === inference.sh coding/search skills kept in default install ===
+
+[[skills]]
+name = "agent-browser"
+source = "inference-sh/skills"
+path = "tools/utilities/agent-browser"
+
+[[skills]]
+name = "javascript-sdk"
+source = "inference-sh/skills"
+path = "sdk/javascript-sdk"
+
+[[skills]]
+name = "python-sdk"
+source = "inference-sh/skills"
+path = "sdk/python-sdk"
+
+[[skills]]
+name = "web-search"
+source = "inference-sh/skills"
+path = "tools/llm/web-search"
+
+# === Cloudflare skills kept in default install ===
+
+[[skills]]
+name = "agents-sdk"
+source = "cloudflare/skills"
+path = "skills/agents-sdk"
+
+[[skills]]
+name = "cloudflare"
+source = "cloudflare/skills"
+path = "skills/cloudflare"
+
+[[skills]]
+name = "cloudflare-email-service"
+source = "cloudflare/skills"
+path = "skills/cloudflare-email-service"
+
+[[skills]]
+name = "cloudflare-one"
+source = "cloudflare/skills"
+path = "skills/cloudflare-one"
+
+[[skills]]
+name = "cloudflare-one-migrations"
+source = "cloudflare/skills"
+path = "skills/cloudflare-one-migrations"
+
+[[skills]]
+name = "durable-objects"
+source = "cloudflare/skills"
+path = "skills/durable-objects"
+
+[[skills]]
+name = "sandbox-sdk"
+source = "cloudflare/skills"
+path = "skills/sandbox-sdk"
+
+[[skills]]
+name = "turnstile-spin"
+source = "cloudflare/skills"
+path = "skills/turnstile-spin"
+
+[[skills]]
+name = "web-perf"
+source = "cloudflare/skills"
+path = "skills/web-perf"
+
+[[skills]]
+name = "workers-best-practices"
+source = "cloudflare/skills"
+path = "skills/workers-best-practices"
+
+[[skills]]
+name = "wrangler"
+source = "cloudflare/skills"
+path = "skills/wrangler"
+
+# === General coding/debugging skills kept in default install ===
+
+[[skills]]
+name = "requesting-code-review"
+source = "obra/superpowers"
+path = "skills/requesting-code-review"
+
+[[skills]]
+name = "systematic-debugging"
+source = "obra/superpowers"
+path = "skills/systematic-debugging"
+
+[[skills]]
+name = "shadcn"
+source = "shadcn/ui"
+path = "skills/shadcn"
+
+[[skills]]
+name = "find-skills"
+source = "vercel-labs/skills"
+path = "skills/find-skills"
+
+[[skills]]
+name = "typescript-advanced-types"
+source = "wshobson/agents"
+path = "plugins/javascript-typescript/skills/typescript-advanced-types"

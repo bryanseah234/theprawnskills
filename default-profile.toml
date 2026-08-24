@@ -1,0 +1,93 @@
+# Default installed skill profile.
+#
+# This is the desired baseline for every coding agent installed root listed in
+# machines.toml. When a new CLI agent is added, add its skill root to the
+# matching machine's `installed_roots`, then propagate this profile.
+
+version = 1
+name = "lean-coding-agent"
+
+skills = [
+  # Discovery and skill management
+  "skill-router",
+  "skill-create",
+  "skill-add",
+  "skill-update",
+  "skill-cleanup",
+  "skill-remove",
+
+  # Planning output
+  "postplan-upload",
+
+  # Core coding workflow
+  "build",
+  "check",
+  "bug-diagnosis",
+  "to-spec",
+  "to-tickets",
+  "prototype",
+  "cross-harness-state",
+  "commit-work",
+  "git-commit",
+  "refactor",
+  "requesting-code-review",
+  "systematic-debugging",
+  "security-best-practices",
+  "dependency-updater",
+  "docker-expert",
+  "database-schema-designer",
+  "openapi-to-typescript",
+  "typescript-advanced-types",
+  "javascript-sdk",
+  "python-sdk",
+  "react-dev",
+  "react-useeffect",
+  "shadcn",
+
+  # Agent and tool orchestration
+  "agent-browser",
+  "cli-agent-router",
+  "claude-code-cli",
+  "codex",
+  "opencode-cli",
+  "agents-sdk",
+  "mcp-builder",
+  "mcp-health-repair",
+  "mcp-security-hygiene",
+  "postgres-mcp-onboarding",
+  "project-db-autodetect",
+  "sandbox-sdk",
+
+  # Cloudflare default stack
+  "cloudflare",
+  "cloudflare-email-service",
+  "cloudflare-one",
+  "cloudflare-one-migrations",
+  "durable-objects",
+  "workers-best-practices",
+  "wrangler",
+  "turnstile-spin",
+  "web-perf",
+  "web-search",
+  "web-to-markdown",
+
+  # Existing workflow helpers
+  "cavecrew",
+  "caveman",
+  "caveman-commit",
+  "caveman-compress",
+  "caveman-help",
+  "caveman-review",
+  "caveman-stats",
+  "find-skills",
+  "skill-creator",
+  "skill-judge",
+  "skill-reviewer",
+]
+
+[rules]
+archive_before_overwrite = true
+archive_root = "_removed"
+propagate_to_enabled_machines = true
+continue_when_machine_unreachable = true
+do_not_run = ["dotagents sync"]
