@@ -61,3 +61,14 @@ git -C "C:\Users\bryan\OneDrive\01 SKILLS\.agents" push
   excluding nothing; installed roots re-propagate via
   scripts/Install-DefaultSkillProfile.ps1.
 - Ignored: node_modules/, packages/, _removed/ (re-fetchable artifacts).
+
+## Machine-local backups convention
+
+Never scatter backups/zips/tmps in C:\ root or C:\Users\bryan\AppData\Local\Temp. Use:
+
+- Path: C:\Users\bryan\Backups\<yyyy-MM-dd>\<category>\
+- Keep OUTSIDE OneDrive (machine-local artifacts do not belong in cloud sync)
+- Categories seen so far: opencode-config-baks, opencode-config-pre-reinstall
+- Delete freely after ~1 month; these are convenience copies only.
+  The durable backup of the skill library is the private git remote
+  (see Skill library backup above).
